@@ -485,5 +485,14 @@ footer{
     .links{
         justify-content: flex-start;
     }
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    header{
+       margin-bottom: 50px;
+    }
+    .main-contacts{
+        width:70%;
+        padding:50px 15%;
+    }
     
 }
