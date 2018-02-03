@@ -1,19 +1,22 @@
-@font-face{
-    font-family:"PTSansRegular";
-    src:url(../fonts/PT_Sans-Web-Regular.ttf)
+@font-face {
+    font-family: "GothamProRegular";
+    src: url("../fonts/GothamProRegular.eot");
+    src: url("../fonts/GothamProRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/GothamProRegular.woff") format("woff"),
+    url("../fonts/GothamProRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
 }
-@font-face{
-    font-family:"PTSansBold";
-    src:url(../fonts/PT_Sans-Web-Bold.ttf)
+@font-face {
+    font-family: "PlayfairDisplayRegular";
+    src: url("../fonts/PlayfairDisplay-Regular.ttf");
 }
 *{
     margin:0;
     padding:0;
     text-decoration:none;
     list-style-type:none;
-}
-a:visited, a:active{
-    color:black;
+    font-family: "GothamProRegular";
 }
 
 header{
@@ -56,7 +59,7 @@ header{
     text-align: center;
 }
 .contact-mail{
-    font-size: 17px;
+    font-size: 15px;
     color: #e6b670;
     text-decoration: underline;
     text-align: center;
@@ -138,10 +141,10 @@ nav{
     display: flex;
 }
 
-li a{
+.nav-a{
     color: white;
 }
-li a:hover{
+.nav-a:hover{
     color: #f13945;
     text-decoration: underline;
 }
@@ -168,7 +171,8 @@ main{
     height: auto;
 }
 .main-contacts-h{
-    font-size: 43px;
+    font-family: "PlayfairDisplayRegular";
+    font-size: 35px;
 }
 .orange-line{
     width: 80px;
@@ -198,9 +202,14 @@ main{
     height: 40px;
     background-color: #e6b670;
     border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 .office-h{
     width: 200px;
+    font-weight: bolder;
 }
 .address-p{
     width: 220px;
@@ -216,7 +225,11 @@ main{
 .map{
     width: 100%;
     height: 280px;
-    background-color: orange;
+    background-image: url(../img/map.png);
+    background-position: center;
+}
+.leave-massage{
+    margin-top:50px;
 }
 .message-form{
     width: 100%;
@@ -231,22 +244,62 @@ main{
     display: flex;
     flex-wrap: wrap;
 }
-.user-info input{
+.user-info>div{
     width: 95%;
     height: 50px;
     padding: 5px 1.5%;
     margin: 5px 1.5%;
     background-color: #f7f7f7;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.user-face{
+    width: 25px;
+    height: 20px;
+    background-image: url(../img/human-icon.png);
+    margin-right: 10px;
+}
+.user-phone{
+    width: 25px;
+    height: 20px;
+    background-image: url(../img/gold-phone-icon.png);
+    margin-right: 10px;
+}
+.user-mail{
+    width: 25px;
+    height: 20px;
+    background-image: url(../img/gold-mail-icon.png);
+    margin-right: 10px;
+}
+.input-info{
+    width: 100%;
+    height: inherit;
+    background-color: #f7f7f7;
     border: 0;
 }
-.message-form>textarea{
-    width: 94%;
+.message-form-textarea{
+    width: 95%;
     height: 50px;
-    padding: 5px 1.5%;
+    padding: 5px 1%;
     margin: 5px 1.5%;
+    display: flex;
+    flex-direction: row;
+    background-color: #f7f7f7;
+}
+textarea{
+    width: 100%;
+    height: 85%;
     background-color: #f7f7f7;
     border: 0;
     resize: none;
+    margin-top: 3%;
+}
+.user-message{
+    width: 22px;
+    height: 20px;
+    background-image: url(../img/message-icon.png);
+    margin-top: 3%;
 }
 .sublime-btn{
     width: 97%;
@@ -254,6 +307,8 @@ main{
     margin: 5px 1.5%;
     color: white;
     border: 0;
+    background-color: #eac185;
+    background-image: linear-gradient(-45deg, transparent 50%, #e6b670 25%);
 }
 .small-txt{
     width: 50%;
@@ -268,11 +323,13 @@ footer{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
 }
 .footer-nav{
     width: 200px;
     height: 130px;
+    margin: 30px 0
 }
 .footer-navigation{
     width: inherit;
@@ -282,8 +339,10 @@ footer{
     flex-wrap: wrap;
 }
 .footer-nav-h{
+    width: 100%;
     color: white;
     font-size: 15px;
+    text-align: center;
 }
 .footer-navigation a{
     margin: 10px 0;
@@ -293,9 +352,32 @@ footer{
 }
 .society{
     width: 250px;
+    margin: 30px;
 }
 .footer-address-p{
     color: white;
+}
+.footer-contacts{
+    margin: 30px 0;
+}
+.footer-contacts li{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.links{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px 0;
+}
+.links-icon{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }
 @media(min-width:768px){
     .hat{
@@ -341,15 +423,11 @@ footer{
         display: flex;
         flex-wrap: wrap;
     }
-    .user-info input{
+    .user-info>div{
         width: 44%;
         height: 50px;
-        padding: 5px 1.5%;
-        margin: 5px 1.5%;
-        background-color: #f7f7f7;
-        border: 0;
     }
-    .message-form>textarea{
+    .message-form-textarea{
         width: 48%;
         height: 120px;
         background-color: #f7f7f7;
@@ -364,7 +442,6 @@ footer{
     footer{
         width: 80%;
         padding: 100px 10%;
-        flex-direction: row;
     }
 }
 @media(min-width:992px){
@@ -398,6 +475,15 @@ footer{
     footer{
         width: 70%;
         padding: 100px 15%;
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+    }
+    .footer-nav-h{
+        text-align: left;
+    }
+    .links{
+        justify-content: flex-start;
     }
     
 }

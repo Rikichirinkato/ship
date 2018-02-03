@@ -12,9 +12,9 @@
       <section class="hat">
         <a href="#" class="logo"></a>
         <article class="contact">
-          <p class="contact-with">Свяжитесь с нами</p>
+          <p class="contact-with">Свяжитесь с нами:</p>
           <a class="contact-number" href="tel:+7 (495) 123-45-67">+7 (495) 123-45-67</a>
-          <a class="contact-mail" href="mailto:mail@shiprent.ru">mail@shiprent.ru</a>
+          <a class="contact-mail" href="mailto:почьта@адрессайта.ru">почьта@адрессайта.ru</a>
         </article>
         <aricle class="language">
           <div class="flag">
@@ -33,12 +33,12 @@
         </label>
         <input type="checkbox" name="checkbox" id="menushka">
         <ul class="navigation">
-          <li><a href ="#">Главная</a></li>
-          <li><a href ="#">О нас</a></li>
-          <li><a href ="#">Яхты</a></li>
-          <li><a href ="#">Отзывы</a></li>
-          <li><a href ="#">F.A.Q.<a/</li>
-          <li><a href ="#">Контакты</a></li>
+          <li><a class="nav-a" href ="#">Главная</a></li>
+          <li><a class="nav-a" href ="#">О нас</a></li>
+          <li><a class="nav-a" href ="#">Яхты</a></li>
+          <li><a class="nav-a" href ="#">Отзывы</a></li>
+          <li><a class="nav-a" href ="#">F.A.Q.<a/</li>
+          <li><a class="nav-a" href ="#">Контакты</a></li>
         </ul>  
       </nav>
     </header>
@@ -51,21 +51,19 @@
           <section class="main-contacts-address-map">
             <ul class="office">
               <li>
-                <div class="office-logo">
-                  <img src=""/>
-                </div>
+                <img src="img/icon1.png"/>
                 <p class="office-h">ОФИС ПРОДАЖ</p>
               </li>
               <li>
-                <img src="">
+                <img src="img/top-icon.png">
                 <p class="address-p">Адреса<br><span class="address-p-span">г.Москва, улица Неизвесная, ХХ</span></p>
               </li>
               <li>
-                <img src="">
+                <img src="img/phone-icon.png">
                 <p class="address-p">Адреса<br><span class="address-p-span">+7 (495) 123-45-67</span></p>
               </li>
               <li>
-                <img src="">
+                <img src="img/mail-icon.png">
                 <p class="address-p">Адреса<br><a href="mailto:mail@yandex.ru" class="address-mail">mail@yandex.ru</a></p>
               </li>
             </ul>  
@@ -77,12 +75,12 @@
           <div class="orange-line"></div>
           <form class="message-form">
             <section class="user-info">
-              <input type="text" name="name" placeholder="Ваше имя">
-              <input type="text" name="surname" placeholder="Ваша фамилия">
-              <input type="number" name="number" placeholder="Ваше телефон">
-              <input type="text" name="e-mail" placeholder="Ваше e-mail">
+              <div><div class="user-face"></div><input class="input-info" type="text" name="name" placeholder="Ваше имя"></div>
+              <div><div class="user-face"></div><input class="input-info" type="text" name="surname" placeholder="Ваша фамилия"></div>
+              <div><div class="user-phone"></div> <input class="input-info" type="number" name="number" placeholder="Ваше телефон"></div>
+              <div><div class="user-mail"></div> <input class="input-info" type="text" name="e-mail" placeholder="Ваше e-mail"></div>
             </section>
-            <textarea type="text" name="message" placeholder="Ваше сообщение"></textarea>
+            <div class="message-form-textarea"><div class="user-message"></div><textarea type="text" name="message" placeholder="Ваше сообщение"></textarea></div>
             <button class="sublime-btn" type="sublime">Отправить</button>
           </form>
           <p class="small-txt">* - Нажимая кнопку «Отправить», Вы соглашаетсь с условиями политики конфидеенциальности даных</p>
@@ -104,19 +102,39 @@
       </section>
       <section class="society">
         <h1 class="footer-nav-h">МЫ В СОЦСЕТЯХ</h1>
+        <article class="links">
+          <a href="">
+            <img class="links-icon" src="img/fb-icon.png">
+          </a>
+          <a href="">
+            <img class="links-icon" src="img/ins-icon.png">
+          </a>
+          <a href="">
+            <img class="links-icon" src="img/tw-icon.png">
+          </a>
+          <a href="">
+            <img class="links-icon" src="img/google-icon.png">
+          </a>
+        </article>
+        <article>
+          <p class="address-p">Платёжная система:</p>
+          <a href="">
+            <img src="img/go-pay-icon.png">
+          </a>
+        </article>
       </section>
-      <ul>
-        <li class="footer-nav-h">КОНТАКТЫ</li>
+      <ul class="footer-contacts">
+        <li><p class="footer-nav-h">КОНТАКТЫ</p></li>
         <li>
-          <img src="">
+          <img src="img/top-icon.png">
           <p class="address-p">Адреса<br><span class="footer-address-p">г.Москва, улица Неизвесная, ХХ</span></p>
         </li>
         <li>
-          <img src="">
+          <img src="img/phone-icon.png">
           <p class="address-p">Адреса<br><span class="footer-address-p">+7 (495) 123-45-67</span></p>
         </li>
         <li>
-          <img src="">
+          <img src="img/mail-icon.png">
           <p class="address-p">Адреса<br><a href="mailto:mail@yandex.ru" class="address-mail">mail@yandex.ru</a></p>
         </li>
       </ul>
